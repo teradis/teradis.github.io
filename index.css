@@ -897,6 +897,10 @@
 }
 
 @media (max-width: 575px) {
+  .u-section-4 .u-sheet-1 {
+    min-height: 645px;
+  }
+
   .u-section-4 .u-text-1 {
     width: 141px;
     margin-top: 19px;
@@ -904,7 +908,7 @@
 
   .u-section-4 .u-gallery-1 {
     margin-top: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 60px;
   }
 }.u-section-5 {
   background-image: none;
@@ -964,12 +968,20 @@
   }
 
   .u-section-5 .u-layout-wrap-1 {
-    margin-top: 22px;
+    margin-top: 0;
+  }
+
+  .u-section-5 .u-layout-cell-1 {
+    min-height: 282px;
   }
 
   .u-section-5 .u-container-layout-1 {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .u-section-5 .u-text-1 {
+    width: auto;
   }
 }
 
