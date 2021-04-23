@@ -33730,7 +33730,8 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 @media (max-width: 575px) {
   .u-header .u-image-1 {
-    width: 63px;
+    width: auto;
+    height: auto;
   }
 
   .u-header .u-social-icons-1 {
@@ -33738,12 +33739,12 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 
   .u-header .u-menu-1 {
-    margin-right: 112px;
-    margin-left: 129px;
+    margin-right: auto;
+    margin-left: 132px;
   }
 
   .u-header .u-custom-html-1 {
-    margin-bottom: 25px;
+    margin-bottom: 31px;
     margin-left: 238px;
   }
 }

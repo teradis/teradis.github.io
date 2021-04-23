@@ -14,9 +14,9 @@
 }
 
 .u-section-1 .u-text-2 {
-  font-style: italic;
   font-size: 1.5rem;
   font-weight: 700;
+  font-style: normal;
   margin: 30px 11px 0 823px;
 }
 
@@ -1033,11 +1033,12 @@
 
 @media (max-width: 1199px) {
   .u-section-7 .u-text-1 {
-    margin-top: 32px;
+    margin-top: 50px;
   }
 
   .u-section-7 .u-image-1 {
     height: 413px;
+    margin-top: 59px;
     margin-bottom: 60px;
     margin-right: initial;
     margin-left: initial;
