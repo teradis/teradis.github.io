@@ -19,31 +19,28 @@
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.13.1, nicepage.com">
-    <script> window.onload = function() {
-    const languages = document.getElementById('languages');
-	languages.value = '/';
-	
-	const menuItems = document.getElementsByClassName('u-nav-link');
-	for(let i = 0; i < menuItems.length; i++) {
-	  const menuItem = menuItems[i];
-	  if(menuItem.href.includes('index.html') && !menuItem.href.includes('#')) {
-		  menuItem.innerHTML = 'Acceuil';
-		  menuItem.href = '/';
-	  } else if(menuItem.href.includes('index.html#sec-c58c')) {
-		  menuItem.innerHTML = 'Métiers';
-	  } else if(menuItem.href.includes('index.html#sec-7a79')) {
-		  menuItem.innerHTML = 'Partenaires';
-	  } else if(menuItem.href.includes('index.html#sec-e576')) {
-		  menuItem.innerHTML = 'Réalisations';
-	  } else if(menuItem.href.includes('index.html#sec-1248')) {
-		  menuItem.innerHTML = 'Clients';
-	  } else if(menuItem.href.includes('index.html#sec-d104')) {
-		  menuItem.innerHTML = 'À propos';
-	  } else if(menuItem.href.includes('index.html#carousel_7da3')) {  
-		  menuItem.innerHTML = 'Contact';
-	  }
-	}
-  }; </script>
+    <script> window.addEventListener('load', function() {
+    const menuItems = document.getElementsByClassName('u-nav-link');
+    for(let i = 0; i < menuItems.length; i++) {
+      const menuItem = menuItems[i];
+      if(menuItem.href.includes('index.html') && !menuItem.href.includes('#')) {
+          menuItem.innerHTML = 'Acceuil';
+          menuItem.href = '/';
+      } else if(menuItem.href.includes('index.html#sec-c58c')) {
+          menuItem.innerHTML = 'Métiers';
+      } else if(menuItem.href.includes('index.html#sec-7a79')) {
+          menuItem.innerHTML = 'Partenaires';
+      } else if(menuItem.href.includes('index.html#sec-e576')) {
+          menuItem.innerHTML = 'Réalisations';
+      } else if(menuItem.href.includes('index.html#sec-1248')) {
+          menuItem.innerHTML = 'Clients';
+      } else if(menuItem.href.includes('index.html#sec-d104')) {
+          menuItem.innerHTML = 'À propos';
+      } else if(menuItem.href.includes('index.html#carousel_7da3')) {  
+          menuItem.innerHTML = 'Contact';
+      }
+    }
+  }); </script>
     <link rel="icon" href="images/favicon.png">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Oswald:200,300,400,500,600,700">
@@ -171,14 +168,151 @@
           </div>
         </nav>
         <div class="u-clearfix u-custom-html u-enable-responsive u-custom-html-1">
-          <script> function changeLanguage(elt) {
-    window.location = elt.value;
-  } </script>
-          <select id="languages" onchange="javascript:changeLanguage(this)">
-            <option value="/" selected="selected">Français</option>
-            <option value="ar.html">Arabe</option>
-            <option value="en.html">Anglais</option>
-          </select>
+          <style> /* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #ff6918;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #ff6918;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+} </style>
+          <script> window.onload = function(){
+    const languages = document.getElementById("languages");
+    if(window.location.pathname.includes("ar.html")){
+	  languages.value = "ar.html";
+	}else if(window.location.pathname.includes("en.html")){
+	  languages.value = "en.html";
+	}else{
+	  languages.value = "/";
+	}
+	
+    let x, i, j, l, ll, selElmnt, a, b, c, d;
+    /* Look for any elements with the class "custom-select": */
+    x = document.getElementsByClassName("custom-select");
+    l = x.length;
+    for (i = 0; i < l; i++) {
+      selElmnt = x[i].getElementsByTagName("select")[0];
+      ll = selElmnt.length;
+      /* For each element, create a new DIV that will act as the selected item: */
+      a = document.createElement("DIV");
+      a.setAttribute("class", "select-selected");
+      a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+	  d = document.createElement("INPUT");
+	  d.setAttribute("type", "hidden");
+	  d.value = selElmnt.options[selElmnt.selectedIndex].value;
+	  a.appendChild(d);
+      x[i].appendChild(a);
+      /* For each element, create a new DIV that will contain the option list: */
+      b = document.createElement("DIV");
+      b.setAttribute("class", "select-items select-hide");
+      for (j = 0; j < ll; j++) {
+        /* For each option in the original select element,
+        create a new DIV that will act as an option item: */
+        c = document.createElement("DIV");
+        c.innerHTML = selElmnt.options[j].innerHTML;
+		d = document.createElement("INPUT");
+	    d.setAttribute("type", "hidden");
+	    d.value = selElmnt.options[j].value;
+	    c.appendChild(d);
+        c.addEventListener("click", function(e) {
+			window.location = this.getElementsByTagName("input")[0].value;
+        });
+        b.appendChild(c);
+      }
+      x[i].appendChild(b);
+      a.addEventListener("click", function(e) {
+        /* When the select box is clicked, close any other select boxes,
+        and open/close the current select box: */
+        e.stopPropagation();
+        closeAllSelect(this);
+        this.nextSibling.classList.toggle("select-hide");
+        this.classList.toggle("select-arrow-active");
+      });
+    }
+
+    function closeAllSelect(elmnt) {
+      /* A function that will close all select boxes in the document,
+      except the current select box: */
+      var x, y, i, xl, yl, arrNo = [];
+      x = document.getElementsByClassName("select-items");
+      y = document.getElementsByClassName("select-selected");
+      xl = x.length;
+      yl = y.length;
+      for (i = 0; i < yl; i++) {
+        if (elmnt == y[i]) {
+          arrNo.push(i)
+        } else {
+          y[i].classList.remove("select-arrow-active");
+        }
+      }
+      for (i = 0; i < xl; i++) {
+        if (arrNo.indexOf(i)) {
+          x[i].classList.add("select-hide");
+        }
+      }
+    }
+
+    /* If the user clicks anywhere outside the select box,
+    then close all select boxes: */
+    document.addEventListener("click", closeAllSelect);
+  }; </script>
+          <div class="custom-select" style="width:120px;">
+            <select id="languages">
+              <option value="/" selected="selected">Français</option>
+              <option value="ar.html">Arabe</option>
+              <option value="en.html">Anglais</option>
+            </select>
+          </div>
         </div>
       </div></header>
     <section class="u-align-left u-clearfix u-image lazyload u-section-1" id="carousel_c923" data-image-width="1600" data-image-height="1212" data-bg="url(&quot;images/gapi41.jpg&quot;)">
@@ -622,9 +756,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-67f2"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-font u-text-variant u-text-1">Designed and developed by <a href="https://teradev.ma" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Teradev</a>
+        <p class="u-small-text u-text u-text-font u-text-variant u-text-1">Designed and developed by <a href="https://teradev.ma" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Teradev</a>.
         </p>
-        <p class="u-small-text u-text u-text-variant u-text-2">Copyright © 2021 Teradis</p>
+        <p class="u-small-text u-text u-text-variant u-text-2">©&nbsp;Copyright 2021 Teradis.</p>
       </div></footer><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 5px; bottom: 80px;" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-2-base u-spacing-10" data-href="#">
         <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
         <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
