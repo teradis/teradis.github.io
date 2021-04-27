@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="en.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 3.13.1, nicepage.com">
+    <meta name="generator" content="Nicepage 3.13.2, nicepage.com">
     <script> window.addEventListener('load', function() {
     const menuItems = document.getElementsByClassName('u-nav-link');
     for(let i = 0; i < menuItems.length; i++) {
@@ -255,20 +255,53 @@
       /* For each element, create a new DIV that will contain the option list: */
       b = document.createElement("DIV");
       b.setAttribute("class", "select-items select-hide");
-      for (j = 0; j < ll; j++) {
-        /* For each option in the original select element,
-        create a new DIV that will act as an option item: */
-        c = document.createElement("DIV");
-        c.innerHTML = selElmnt.options[j].innerHTML;
-		d = document.createElement("INPUT");
-	    d.setAttribute("type", "hidden");
-	    d.value = selElmnt.options[j].value;
-	    c.appendChild(d);
-        c.addEventListener("click", function(e) {
-			window.location = this.getElementsByTagName("input")[0].value;
-        });
-        b.appendChild(c);
-      }
+      if (window.location.pathname.includes("en.html")) {
+		  for (j = 0; j < ll - 1; j++) {
+			/* For each option in the original select element,
+			create a new DIV that will act as an option item: */
+			c = document.createElement("DIV");
+			c.innerHTML = selElmnt.options[j].innerHTML;
+			d = document.createElement("INPUT");
+			d.setAttribute("type", "hidden");
+			d.value = selElmnt.options[j].value;
+			c.appendChild(d);
+			c.addEventListener("click", function(e) {
+				window.location = this.getElementsByTagName("input")[0].value;
+			});
+			b.appendChild(c);
+		  }
+	  } else if (window.location.pathname.includes("ar.html")) {
+		  for (j = 0; j < ll; j++) {
+		    if (j === 1) continue;
+			/* For each option in the original select element,
+			create a new DIV that will act as an option item: */
+			c = document.createElement("DIV");
+			c.innerHTML = selElmnt.options[j].innerHTML;
+			d = document.createElement("INPUT");
+			d.setAttribute("type", "hidden");
+			d.value = selElmnt.options[j].value;
+			c.appendChild(d);
+			c.addEventListener("click", function(e) {
+				window.location = this.getElementsByTagName("input")[0].value;
+			});
+			b.appendChild(c);
+		  }
+	  } else {
+		  for (j = 1; j < ll; j++) {
+			/* For each option in the original select element,
+			create a new DIV that will act as an option item: */
+			c = document.createElement("DIV");
+			c.innerHTML = selElmnt.options[j].innerHTML;
+			d = document.createElement("INPUT");
+			d.setAttribute("type", "hidden");
+			d.value = selElmnt.options[j].value;
+			c.appendChild(d);
+			c.addEventListener("click", function(e) {
+				window.location = this.getElementsByTagName("input")[0].value;
+			});
+			b.appendChild(c);
+		  }
+	  }
       x[i].appendChild(b);
       a.addEventListener("click", function(e) {
         /* When the select box is clicked, close any other select boxes,
