@@ -141,7 +141,7 @@
     margin-right: 0;
   }
 }.u-section-2 .u-sheet-1 {
-  min-height: 4165px;
+  min-height: 5884px;
 }
 
 .u-section-2 .u-text-1 {
@@ -155,6 +155,7 @@
 
 .u-section-2 .u-image-1 {
   min-height: 564px;
+  background-position: 50% 50%;
 }
 
 .u-section-2 .u-container-layout-1 {
@@ -215,7 +216,7 @@
 
 .u-section-2 .u-layout-wrap-4 {
   margin-top: 17px;
-  margin-bottom: 60px;
+  margin-bottom: 0;
 }
 
 .u-section-2 .u-layout-cell-5 {
@@ -244,13 +245,24 @@
   margin-bottom: -1px;
 }
 
+.u-section-2 .u-image-8 {
+  height: 868px;
+  margin-top: 17px;
+  margin-bottom: 0;
+}
+
+.u-section-2 .u-image-9 {
+  height: 726px;
+  margin-top: 17px;
+  margin-bottom: 60px;
+}
+
 @media (max-width: 1199px) {
   .u-section-2 .u-sheet-1 {
-    min-height: 3067px;
+    min-height: 4853px;
   }
 
   .u-section-2 .u-image-1 {
-    background-position: 50% 50%;
     min-height: 465px;
   }
 
@@ -302,11 +314,19 @@
   .u-section-2 .u-image-7 {
     height: 465px;
   }
+
+  .u-section-2 .u-image-8 {
+    height: 638px;
+  }
+
+  .u-section-2 .u-image-9 {
+    height: 628px;
+  }
 }
 
 @media (max-width: 991px) {
   .u-section-2 .u-sheet-1 {
-    min-height: 2397px;
+    min-height: 3726px;
   }
 
   .u-section-2 .u-image-1 {
@@ -372,11 +392,20 @@
   .u-section-2 .u-image-7 {
     height: 356px;
   }
+
+  .u-section-2 .u-image-8 {
+    height: 426px;
+    margin-top: 16px;
+  }
+
+  .u-section-2 .u-image-9 {
+    height: 485px;
+  }
 }
 
 @media (max-width: 767px) {
   .u-section-2 .u-sheet-1 {
-    min-height: 1868px;
+    min-height: 2891px;
   }
 
   .u-section-2 .u-image-1 {
@@ -422,11 +451,19 @@
   .u-section-2 .u-image-7 {
     height: 267px;
   }
+
+  .u-section-2 .u-image-8 {
+    height: 334px;
+  }
+
+  .u-section-2 .u-image-9 {
+    height: 373px;
+  }
 }
 
 @media (max-width: 575px) {
   .u-section-2 .u-sheet-1 {
-    min-height: 1256px;
+    min-height: 1947px;
   }
 
   .u-section-2 .u-image-1 {
@@ -478,5 +515,14 @@
     height: 168px;
     margin-top: 12px;
     margin-bottom: 0;
+  }
+
+  .u-section-2 .u-image-8 {
+    height: 238px;
+    margin-top: -10px;
+  }
+
+  .u-section-2 .u-image-9 {
+    height: 262px;
   }
 }
