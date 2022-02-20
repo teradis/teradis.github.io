@@ -16,9 +16,9 @@
 }
 
 .u-section-1 .u-text-2 {
+  font-size: 0.875rem;
   font-weight: 400;
-  font-size: 1.5rem;
-  margin: -60px auto 0 171px;
+  margin: -56px auto 0 171px;
 }
 
 .u-section-1 .u-text-3 {
@@ -26,7 +26,7 @@
   font-size: 2.25rem;
   font-weight: 400;
   background-image: none;
-  margin: 36px auto 60px -29px;
+  margin: 32px auto 60px -29px;
 }
 
 @media (max-width: 1199px) {
