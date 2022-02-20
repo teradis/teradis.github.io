@@ -8,9 +8,10 @@
 
 .u-section-1 .u-text-1 {
   font-size: 3rem;
-  font-weight: 700;
   animation-duration: 1000ms;
-  margin: 126px 616px 0 0;
+  font-family: SFTransRobotics;
+  font-weight: 400;
+  margin: 126px 582px 0 0;
 }
 
 .u-section-1 .u-text-2 {
@@ -42,7 +43,7 @@
   .u-section-1 .u-text-1 {
     width: auto;
     margin-top: 72px;
-    margin-right: 416px;
+    margin-right: 382px;
   }
 
   .u-section-1 .u-text-2 {
@@ -71,7 +72,7 @@
 
   .u-section-1 .u-text-1 {
     margin-top: 68px;
-    margin-right: 196px;
+    margin-right: 162px;
   }
 
   .u-section-1 .u-text-2 {
@@ -97,7 +98,7 @@
 
   .u-section-1 .u-text-1 {
     margin-top: 82px;
-    margin-right: 16px;
+    margin-right: 0;
   }
 
   .u-section-1 .u-text-2 {
@@ -123,7 +124,6 @@
 
   .u-section-1 .u-text-1 {
     margin-top: 76px;
-    margin-right: 0;
   }
 
   .u-section-1 .u-text-2 {
@@ -145,6 +145,7 @@
 }
 
 .u-section-2 .u-text-1 {
+  font-size: 4.5rem;
   margin: 34px auto 0;
 }
 
@@ -260,10 +261,6 @@
 @media (max-width: 1199px) {
   .u-section-2 .u-sheet-1 {
     min-height: 4853px;
-  }
-
-  .u-section-2 .u-text-1 {
-    font-size: 4.5rem;
   }
 
   .u-section-2 .u-image-1 {
@@ -534,4 +531,9 @@
     height: 262px;
     margin-top: 12px;
   }
+}@font-face {
+  font-family: 'SFTransRobotics';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/SFTransRobotics.ttf);
 }

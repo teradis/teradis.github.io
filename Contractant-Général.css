@@ -8,9 +8,10 @@
 
 .u-section-1 .u-text-1 {
   font-size: 3rem;
-  font-weight: 700;
   animation-duration: 1000ms;
-  margin: 105px 472px 0 0;
+  font-family: SFTransRobotics;
+  font-weight: 400;
+  margin: 105px 384px 0 0;
 }
 
 .u-section-1 .u-text-2 {
@@ -42,7 +43,7 @@
   .u-section-1 .u-text-1 {
     width: auto;
     margin-top: 80px;
-    margin-right: 272px;
+    margin-right: 184px;
   }
 
   .u-section-1 .u-text-2 {
@@ -71,7 +72,7 @@
 
   .u-section-1 .u-text-1 {
     margin-top: 93px;
-    margin-right: 52px;
+    margin-right: 0;
   }
 
   .u-section-1 .u-text-2 {
@@ -97,7 +98,6 @@
 
   .u-section-1 .u-text-1 {
     margin-top: 102px;
-    margin-right: 0;
   }
 
   .u-section-1 .u-text-2 {
@@ -522,4 +522,9 @@
     height: 218px;
     margin-top: 6px;
   }
+}@font-face {
+  font-family: 'SFTransRobotics';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/SFTransRobotics.ttf);
 }
