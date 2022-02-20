@@ -218,6 +218,10 @@
     min-height: 1594px;
   }
 
+  .u-section-2 .u-text-1 {
+    font-size: 4.5rem;
+  }
+
   .u-section-2 .u-layout-cell-1 {
     background-position: 50% 50%;
     min-height: 460px;
@@ -249,6 +253,10 @@
 @media (max-width: 991px) {
   .u-section-2 .u-sheet-1 {
     min-height: 1241px;
+  }
+
+  .u-section-2 .u-text-1 {
+    font-size: 3.75rem;
   }
 
   .u-section-2 .u-layout-cell-1 {
@@ -317,6 +325,10 @@
 @media (max-width: 575px) {
   .u-section-2 .u-sheet-1 {
     min-height: 1572px;
+  }
+
+  .u-section-2 .u-text-1 {
+    font-size: 3rem;
   }
 
   .u-section-2 .u-layout-cell-1 {
