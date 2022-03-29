@@ -1,5 +1,5 @@
  .u-section-1 {
-  background-position: 50% 50%;
+  background-image: none;
 }
 
 .u-section-1 .u-sheet-1 {
@@ -205,7 +205,6 @@
     width: 340px;
   }
 } .u-section-3 {
-  background-image: none;
   margin-top: 0;
   margin-bottom: 0;
 }

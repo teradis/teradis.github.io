@@ -37227,7 +37227,7 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-header .u-image-2 {
   width: 54px;
   height: 82px;
-  margin: -80px 0 0 auto;
+  margin: -80px -2px 0 auto;
 }
 
 .u-header .u-logo-image-2 {
@@ -37284,7 +37284,6 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-header .u-group-1 {
     width: 188px;
-    min-height: 85px;
   }
 
   .u-header .u-image-3 {
