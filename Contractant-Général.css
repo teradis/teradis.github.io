@@ -1,5 +1,5 @@
  .u-section-1 {
-  background-image: none;
+  background-position: 50% 50%;
 }
 
 .u-section-1 .u-sheet-1 {
@@ -25,14 +25,14 @@
   font-size: 1.5rem;
   font-weight: 700;
   font-style: normal;
-  margin: 35px 472px 0 0;
+  margin: 34px 472px 0 0;
 }
 
 .u-section-1 .u-text-4 {
   font-size: 1.5rem;
   font-weight: 700;
   font-style: normal;
-  margin: 35px 472px 60px 0;
+  margin: 36px 472px 60px 0;
 }
 
 @media (max-width: 1199px) {
